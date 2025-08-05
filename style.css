@@ -1,0 +1,109 @@
+body {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    width: 500px;
+}
+h1 {
+    color: #90caf9;
+    text-align: center;
+}
+li {
+    list-style: none;
+    background-color: #1e1e1e;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-left: 5px solid #90caf9;
+    border-top-right-radius:8px ;
+    border-bottom-right-radius: 8px;
+    transition: all 0.3s;
+}
+li:hover{
+    background-color: #2a2a2a;
+    transition: all 0.3s;
+    border-left: 25px solid #90caf9;
+}
+a:hover {
+    color: #90caf9;
+}
+a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+}
+.menu-click {
+    animation: clickEffect 0.3s;
+}
+@keyframes clickEffect {
+    0% { background-color: #90caf9; color: #121212; }
+    100% { background-color: inherit; color: inherit; }
+}
+body.light {
+    background-color: #f5f5f5;
+    color: #121212;
+}
+body.light li {
+    background-color: #fff;
+    border-left: 5px solid #64ffda;
+}
+body.light li:hover {
+    background-color: #e0f7fa;
+    border-left: 25px solid #64ffda;
+}
+body.light h1 {
+    color: #00897b;
+}
+body.light a {
+    color: #121212;
+}
+body.light a:hover {
+    color: #00897b;
+}
+body.light .menu-click {
+    animation: clickEffectLight 0.3s;
+}
+@keyframes clickEffectLight {
+    0% { background-color: #64ffda; color: #121212; }
+    100% { background-color: inherit; color: inherit; }
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+#toggle-theme {
+    margin-top: 12px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #90caf9 0%, #1976d2 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 00;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+#toggle-theme:hover {
+    background: linear-gradient(90deg, #1976d2 0%, #90caf9 100%);
+    color: #121212;
+    transform: scale(1.05);
+}
+
+body.light #toggle-theme {
+    background: linear-gradient(90deg, #64ffda 0%, #00897b 100%);
+    color: #121212;
+}
+body.light #toggle-theme:hover {
+     background: linear-gradient(90deg, #00897b 0%, #64ffda 100%);
+    color: #fff;
+    transform: scale(1.05);
+}
